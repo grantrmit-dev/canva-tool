@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: canva-tool
+    runtime: node
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: CANVA_CLIENT_ID
+        sync: false
+      - key: CANVA_CLIENT_SECRET
+        sync: false
+      - key: CANVA_REDIRECT_URI
+        sync: false
