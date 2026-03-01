@@ -1,0 +1,12 @@
+{
+  "name": "canva-tool",
+  "version": "1.0.0",
+  "description": "Canva Connect API integration — create banners and reports",
+  "main": "server.js",
+  "type": "module",
+  "scripts": { "start": "node server.js" },
+  "dependencies": {
+    "express": "^4.18.2",
+    "open": "^9.1.0"
+  }
+}
