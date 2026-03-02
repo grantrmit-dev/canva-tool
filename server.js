@@ -22,7 +22,7 @@ if (fs.existsSync(ENV_PATH)) {
 
 const CLIENT_ID     = env.CANVA_CLIENT_ID     || process.env.CANVA_CLIENT_ID;
 const CLIENT_SECRET = env.CANVA_CLIENT_SECRET || process.env.CANVA_CLIENT_SECRET;
-const REDIRECT_URI  = env.CANVA_REDIRECT_URI  || 'http://localhost:3456/oauth/callback';
+const REDIRECT_URI  = env.CANVA_REDIRECT_URI  || process.env.CANVA_REDIRECT_URI || 'http://localhost:3456/oauth/callback';
 const PORT          = process.env.PORT || 3456;
 const TOKEN_FILE    = path.join(process.env.HOME, '.openclaw/canva/token.json');
 const CANVA_API     = 'https://api.canva.com/rest/v1';
