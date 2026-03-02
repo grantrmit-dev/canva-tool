@@ -204,6 +204,15 @@ app.post('/export/:designId', async (req, res) => {
   }
 });
 
+// ── Debug: show current config ────────────────────────────────────────────────
+app.get('/debug', (req, res) => {
+  res.json({
+    CLIENT_ID:    CLIENT_ID ? CLIENT_ID.slice(0, 8) + '…' : 'NOT SET',
+    REDIRECT_URI: REDIRECT_URI || 'NOT SET',
+    TOKEN_EXISTS: !!loadToken(),
+  });
+});
+
 // ── Status page ───────────────────────────────────────────────────────────────
 app.get('/', (req, res) => {
   const token = loadToken();
